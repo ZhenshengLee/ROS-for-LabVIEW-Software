@@ -19,12 +19,23 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="ctl" Type="Folder" URL="../ctl">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="ROS Examples" Type="Folder" URL="../ROS Examples">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="test.vi" Type="VI" URL="../test.vi"/>
+		<Item Name="poseSubscriber.vi" Type="VI" URL="../poseSubscriber.vi"/>
+		<Item Name="Publisher.vi" Type="VI" URL="../Publisher.vi"/>
 		<Item Name="turtlesimtest.vi" Type="VI" URL="../turtlesimtest.vi"/>
 		<Item Name="依赖关系" Type="Dependencies">
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="GetMessageFile.vi" Type="VI" URL="/&lt;userlib&gt;/ROS for LabVIEW Software/ROS/Code/SubVIs/GetMessageFile.vi"/>
+				<Item Name="parse_u8_scalar.vi" Type="VI" URL="/&lt;userlib&gt;/ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_u8_scalar.vi"/>
+				<Item Name="parse_uint8.vi" Type="VI" URL="/&lt;userlib&gt;/ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/parse_uint8.vi"/>
+				<Item Name="removeComments.vi" Type="VI" URL="/&lt;userlib&gt;/ROS for LabVIEW Software/ROS/Code/SubVIs/removeComments.vi"/>
+				<Item Name="resolveEmbeddedTypes.vi" Type="VI" URL="/&lt;userlib&gt;/ROS for LabVIEW Software/ROS/Code/SubVIs/resolveEmbeddedTypes.vi"/>
+			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="_ROSControl.ctl" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/_ROSControl.ctl"/>
 				<Item Name="_ROSDefinition.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/_ROSDefinition.vi"/>
@@ -56,6 +67,7 @@
 				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
 				<Item Name="CheckBuildFolder.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/CheckBuildFolder.vi"/>
 				<Item Name="CheckForAlreadyRegistered.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/CheckForAlreadyRegistered.vi"/>
+				<Item Name="CheckForErrors.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Tools/CheckForErrors.vi"/>
 				<Item Name="CheckforLiveConnections.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/CheckforLiveConnections.vi"/>
 				<Item Name="CheckForNewTopic.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/CheckForNewTopic.vi"/>
 				<Item Name="CheckMasterConnection.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/CheckMasterConnection.vi"/>
@@ -75,7 +87,6 @@
 				<Item Name="ConnectionHeaderParse.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ConnectionHeaderParse.vi"/>
 				<Item Name="ConnectionHeaderReply.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ConnectionHeaderReply.vi"/>
 				<Item Name="ConnectToPub.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ConnectToPub.vi"/>
-				<Item Name="ConnToMasterErr.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/Console/ConnToMasterErr.vi"/>
 				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
 				<Item Name="ConvertErrToString.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ConvertErrToString.vi"/>
 				<Item Name="ConvertStringtoROS.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ConvertStringtoROS.vi"/>
@@ -121,8 +132,8 @@
 				<Item Name="GetFIFOQueue.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetFIFOQueue.vi"/>
 				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 				<Item Name="GetInnerXMLTag.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Cmds/XMLCodes/GetInnerXMLTag.vi"/>
+				<Item Name="GetIPAddress.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/Devices/ROSRIO/GetIPAddress.vi"/>
 				<Item Name="GetLogFilePath.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/LogFileCodes/GetLogFilePath.vi"/>
-				<Item Name="GetMessageFile.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetMessageFile.vi"/>
 				<Item Name="GetMimeType.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/Console/HTTPServer/GetMimeType.vi"/>
 				<Item Name="GetMyIPAddress.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetMyIPAddress.vi"/>
 				<Item Name="GetOldData.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/LogFileCodes/GetOldData.vi"/>
@@ -135,6 +146,7 @@
 				<Item Name="GetRidOf66.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetRidOf66.vi"/>
 				<Item Name="GetROSfromTopic.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetROSfromTopic.vi"/>
 				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
+				<Item Name="GetServerNamesAndContents.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetServerNamesAndContents.vi"/>
 				<Item Name="GetServerNiceName.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetServerNiceName.vi"/>
 				<Item Name="GetServerVIName.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetServerVIName.vi"/>
 				<Item Name="GetServiceProviderXML.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/GetServiceProviderXML.vi"/>
@@ -154,7 +166,6 @@
 				<Item Name="i16Scalar.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageBuilding/std_msgs/subs/i16Scalar.vi"/>
 				<Item Name="imagedata.ctl" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/imagedata.ctl"/>
 				<Item Name="Internecine Avoider.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/Internecine Avoider.vi"/>
-				<Item Name="isPrimitiveType.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/isPrimitiveType.vi"/>
 				<Item Name="ListenForSubscriber.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ListenForSubscriber.vi"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
@@ -166,7 +177,6 @@
 				<Item Name="MD5Checksum format message-digest.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum format message-digest.vi"/>
 				<Item Name="MD5Checksum pad.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum pad.vi"/>
 				<Item Name="MD5Checksum string.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/MD5Checksum.llb/MD5Checksum string.vi"/>
-				<Item Name="messageDefinitionParse.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/messageDefinitionParse.vi"/>
 				<Item Name="MyState.ctl" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/Console/Servers/ServerSubs/MyState.ctl"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
@@ -177,14 +187,23 @@
 				<Item Name="Open URL in Default Browser (string).vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser (string).vi"/>
 				<Item Name="Open URL in Default Browser core.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser core.vi"/>
 				<Item Name="Open URL in Default Browser.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser.vi"/>
+				<Item Name="OpenNodes.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Tools/OpenNodes.vi"/>
+				<Item Name="parse_float64.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/parse_float64.vi"/>
+				<Item Name="parse_float64_array.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_float64_array.vi"/>
+				<Item Name="parse_float64_scalar.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_float64_scalar.vi"/>
+				<Item Name="parse_header.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/parse_header.vi"/>
+				<Item Name="parse_point.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/geometry_msgs/parse_point.vi"/>
+				<Item Name="parse_pose.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/geometry_msgs/parse_pose.vi"/>
+				<Item Name="parse_PoseStamped.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/geometry_msgs/stamped/parse_PoseStamped.vi"/>
+				<Item Name="parse_quaternion.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/geometry_msgs/parse_quaternion.vi"/>
 				<Item Name="parse_string.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/parse_string.vi"/>
 				<Item Name="parse_string_array.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_string_array.vi"/>
 				<Item Name="parse_string_scalar.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_string_scalar.vi"/>
-				<Item Name="parse_u8_array.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_u8_array.vi"/>
-				<Item Name="parse_u8_scalar.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_u8_scalar.vi"/>
+				<Item Name="parse_time.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/parse_time.vi"/>
+				<Item Name="parse_time_array.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_time_array.vi"/>
+				<Item Name="parse_time_scalar.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_time_scalar.vi"/>
 				<Item Name="parse_u32_array.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_u32_array.vi"/>
 				<Item Name="parse_u32_scalar.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/subs/parse_u32_scalar.vi"/>
-				<Item Name="parse_uint8.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/parse_uint8.vi"/>
 				<Item Name="parse_uint32.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/std_msgs/parse_uint32.vi"/>
 				<Item Name="ParseClients.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ParseClients.vi"/>
 				<Item Name="ParseColor.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ParseColor.vi"/>
@@ -210,9 +229,7 @@
 				<Item Name="registerPublisherReply.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Cmds/SlaveAPI/Decode/registerPublisherReply.vi"/>
 				<Item Name="RegisterPubSub.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/RegisterPubSub.vi"/>
 				<Item Name="RegisterSubPub.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Cmds/SlaveAPI/RegisterSubPub.vi"/>
-				<Item Name="removeComments.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/removeComments.vi"/>
 				<Item Name="ReplyNoErr.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ReplyNoErr.vi"/>
-				<Item Name="resolveEmbeddedTypes.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/resolveEmbeddedTypes.vi"/>
 				<Item Name="RogersLog.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/LogFileCodes/RogersLog.vi"/>
 				<Item Name="ROS_lookupService.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Cmds/ROS_lookupService.vi"/>
 				<Item Name="ROS_Master.ctl" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Master/ROS_Master.ctl"/>
@@ -252,23 +269,19 @@
 				<Item Name="ROS_Topic_Init.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Topic_Init.vi"/>
 				<Item Name="ROS_Topic_Read.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Topic_Read.vi"/>
 				<Item Name="ROS_Topic_Read_Primative.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Topic_Read_Primative.vi"/>
-				<Item Name="ROS_Topic_Repeat.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Topic_Repeat.vi"/>
 				<Item Name="ROS_Topic_Write.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Topic_Write.vi"/>
-				<Item Name="ROS_Topic_Write_Continuous_Primitive.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Topic_Write_Continuous_Primitive.vi"/>
 				<Item Name="ROS_Topic_Write_Primitive.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Topic_Write_Primitive.vi"/>
-				<Item Name="ROS_Topic_Write_Stop_Continuous_Primitive.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Topic_Write_Stop_Continuous_Primitive.vi"/>
 				<Item Name="ROS_UDP Server.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/ROS_UDP Server.vi"/>
-				<Item Name="ROSErrorCheck.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROSErrorCheck.vi"/>
 				<Item Name="ROSLog.ctl" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/Console/Servers/ServerSubs/ROSLog.ctl"/>
 				<Item Name="ROSNode.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/NewROS/ROSNode.vi"/>
 				<Item Name="ROSPublisher.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/NewROS/ROSPublisher.vi"/>
 				<Item Name="ROSServiceClient.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/NewROS/ROSServiceClient.vi"/>
 				<Item Name="ROSServiceProvider.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/NewROS/ROSServiceProvider.vi"/>
 				<Item Name="ROSSubscriber.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/NewROS/ROSSubscriber.vi"/>
+				<Item Name="ROSTerminal.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Tools/ROSTerminal.vi"/>
 				<Item Name="ROSToQueue.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/Console/Servers/ServerSubs/ROSToQueue.vi"/>
 				<Item Name="SaveReadPrefs.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/SaveReadPrefs.vi"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
-				<Item Name="searchROSMsg.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/SubVIs/searchROSMsg.vi"/>
 				<Item Name="SendXML.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Cmds/XMLCodes/SendXML.vi"/>
 				<Item Name="service_error_parse.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/MessageParsing/subs/service_error_parse.vi"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
@@ -314,10 +327,7 @@
 				<Item Name="WriteErrorCheck.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/Console/HTTPServer/WriteErrorCheck.vi"/>
 				<Item Name="WriteTCPIP.vi" Type="VI" URL="/&lt;vilib&gt;/Tufts CEEO ROS for LabVIEW Software/ROS/Code/Console/HTTPServer/WriteTCPIP.vi"/>
 			</Item>
-			<Item Name="Point.ctl" Type="VI" URL="../../../../Zhensheng/documents/GitHub/zsLV/ctl/Point.ctl"/>
-			<Item Name="pose.ctl" Type="VI" URL="../../../../Zhensheng/documents/GitHub/zsLV/ctl/pose.ctl"/>
-			<Item Name="ROS_Master_CloseAllServiceProviders.vi" Type="VI" URL="/vi.lib/Tufts CEEO ROS for LabVIEW Software/ROS/Code/ROS_Master/ROS_Master_CloseAllServiceProviders.vi"/>
-			<Item Name="RPY.ctl" Type="VI" URL="../../../../Zhensheng/documents/GitHub/zsLV/ctl/RPY.ctl"/>
+			<Item Name="ROS_Master_CloseAllServiceProviders.vi" Type="VI" URL="../../ROS/Code/ROS_Master/ROS_Master_CloseAllServiceProviders.vi"/>
 		</Item>
 		<Item Name="程序生成规范" Type="Build"/>
 	</Item>
