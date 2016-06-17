@@ -1,7 +1,8 @@
 #### 向本软件作者及贡献者致谢！
 
-* 本人在自己的软件项目中引用了该软件组件
+* 本人在自己的软件项目中引用了该组件
 * 本人计划在该项目中添加有关P3AT移动机器人的例子和消息创建和解析子vi
+* 在阅读ROSforLabVIEW源码和ROS Actionlib 源码基础上构建ActionClient 和ActionProvider
 
 ============================
 ROS for LabVIEW(TM) Software
